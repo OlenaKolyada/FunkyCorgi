@@ -1,0 +1,267 @@
+/*Global Start*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/RobotoFlex.woff2') format('woff2-variations'),
+    url('../fonts/RobotoFlex.woff') format('woff-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+}
+
+:root {
+    --primary-color: #32577F;
+    --primary-color-light: #779bdb;
+    --secondary-color: #db734f;
+    --black: #221a25;
+    --white: #faf5f2;
+    --grey-extra-light: #f0f0f0;
+    --grey-light: #d4d4d4;
+    --grey-medium: #a0a4a8;
+    --grey: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+h2 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--grey-light);
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color-light);
+}
+
+h4 {
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+/*Global End*/
+
+/*Aside Start*/
+aside {
+    width: 300px;
+    background-color: var(--primary-color);
+    color: var(--grey-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+aside h1 {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+aside .subtitle {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+
+aside h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+aside a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--grey-light);
+    text-decoration: none;
+    transition: all 0.5s ease;
+    margin-bottom: 0;
+}
+
+aside a:hover {
+    color: var(--white);
+}
+
+.aside-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+aside .icon {
+    margin-bottom: 0;
+    height: 20px;
+}
+
+aside p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+}
+
+aside li {
+    font-size: 0.9rem;
+}
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info a {
+    margin-bottom: 0.8rem;
+}
+
+.contact-info img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+.contact-item.address {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+/*Aside End*/
+
+/*Main Start*/
+main {
+    width: 700px;
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+
+
+.project-item {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.project-item:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.project-item p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.project-item ul li {
+    margin-bottom: 0.3rem;
+}
+
+.project-item a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.project-item a:hover {
+    color: var(--secondary-color);
+}
+
+ul.dotted {
+    list-style: disc;
+    margin: 1rem 0 0 4rem;
+}
+
+.project-link {
+    margin-top: 1rem;
+}
+
+.scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.scroll-to-top img.scroll-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
