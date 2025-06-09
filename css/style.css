@@ -187,13 +187,39 @@ main {
     background-color: var(--white);
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 section {
     margin-bottom: 3rem;
 }
 
+.swinch-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem 2rem;
+}
 
+.swinch-lang a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 900;
+    transition: color 0.3s ease;
+}
+
+.swinch-lang a:hover {
+    color: var(--secondary-color);
+}
+
+.swinch-lang a.current {
+    display: none;
+}
+
+ul.dotted {
+    list-style: disc;
+    margin: 1rem 0 0 4rem;
+}
 
 .project-item {
     margin-bottom: 2.5rem;
@@ -226,15 +252,12 @@ section {
     color: var(--secondary-color);
 }
 
-ul.dotted {
-    list-style: disc;
-    margin: 1rem 0 0 4rem;
-}
-
 .project-link {
     margin-top: 1rem;
 }
+/*Main End*/
 
+/*Scroll To Top Start*/
 .scroll-to-top {
     opacity: 0;
     visibility: hidden;
@@ -265,3 +288,4 @@ ul.dotted {
     opacity: 1;
     visibility: visible;
 }
+/*Scroll To Top End*/
