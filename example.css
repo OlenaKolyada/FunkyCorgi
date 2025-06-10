@@ -1,12 +1,5 @@
 /*Global Start*/
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/RobotoFlex.woff2') format('woff2-variations'),
-    url('../fonts/RobotoFlex.woff') format('woff-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: block;
-}
+
 
 :root {
     --primary-color: #32577F;
@@ -75,10 +68,13 @@ aside {
     background-color: var(--primary-color);
     color: var(--grey-light);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.avatar {
+aside img {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
@@ -98,7 +94,7 @@ aside .subtitle {
 
 aside h3 {
     font-size: 1rem;
-    margin: 4rem 0 1rem 0;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -118,11 +114,15 @@ aside a:hover {
     color: var(--white);
 }
 
+.aside-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 aside .icon {
     margin-bottom: 0;
-    width: 16px;
-    height: 16px;
-    filter: invert(1);
+    height: 20px;
 }
 
 aside p {
@@ -157,6 +157,12 @@ aside li {
     margin-bottom: 0.8rem;
 }
 
+.contact-info img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
 .contact-item.address {
     text-align: left;
     width: 100%;
@@ -164,10 +170,6 @@ aside li {
     align-items: center;
     gap: 0.5rem;
     justify-content: flex-start;
-}
-
-.portfolio-mobile {
-    display: none;
 }
 /*Aside End*/
 
@@ -182,10 +184,6 @@ main {
 
 section {
     margin-bottom: 3rem;
-}
-
-section:last-of-type {
-    margin-bottom: 0;
 }
 
 .swinch-lang {
@@ -285,73 +283,22 @@ ul.dotted {
 /*Scroll To Top End*/
 
 /*Responsive*/
-@media screen and (max-width: 992px) {
-    aside h1 {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 768px) {
     body {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     aside {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 6vw;
-        justify-content: center;
-    }
-
-    .aside-wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .avatar {
-        width: 200px;
-        height: auto;
-        margin-bottom: 0;
-    }
-
-    .aside-item h3 {
-        display: none;
-    }
-
-    .interests, .portfolio {
-        display: none;
-    }
-
-    .portfolio-mobile {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
     }
 
     main {
         width: 100%;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .avatar {
-        width: 160px;
-    }
-
-    .subtitle {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .avatar {
-        display: none;
-    }
-
-    h1 {
-        margin-bottom: 2rem;
+    aside img {
+        width: 30%;
     }
 }
